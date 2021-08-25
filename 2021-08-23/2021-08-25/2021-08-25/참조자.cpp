@@ -18,4 +18,19 @@ int main() {
 	//int* pData = &3; // 불가능
 	//int& rData = 3;  // 상수에 대한 참조는 불가능
 	//int& rData2;     // 참조 원본이 없으므로 불가능
+
+	int nData = 10;
+
+	int& ref = nData;
+
+	ref = 20; // 참조자의 값을 변경하면 원본도 변경된다.
+
+	std::cout << nData << std::endl;
+
+	// Pointer와 비교
+	int* pnData = &nData;
+	*pnData = 30;
+	std::cout << nData << std::endl;
+
+	return 0;
 }
